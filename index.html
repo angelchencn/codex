@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classic Snake</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <div>
+          <h1>Classic Snake</h1>
+          <p class="app__subtitle">Use arrow keys or WASD to move.</p>
+        </div>
+        <div class="scoreboard">
+          <div class="scoreboard__item">
+            <span class="scoreboard__label">Score</span>
+            <span id="score" class="scoreboard__value">0</span>
+          </div>
+          <div class="scoreboard__item">
+            <span class="scoreboard__label">High</span>
+            <span id="high-score" class="scoreboard__value">0</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="game">
+        <div class="game__status" id="status">Press Start to play.</div>
+        <div class="game__board" id="board" role="img" aria-label="Snake board"></div>
+      </section>
+
+      <section class="controls">
+        <button id="start-btn" class="btn">Start</button>
+        <button id="pause-btn" class="btn btn--secondary" disabled>Pause</button>
+        <button id="restart-btn" class="btn btn--secondary" disabled>Restart</button>
+      </section>
+
+      <section class="touch-controls" aria-label="Touch controls">
+        <button class="btn btn--pad" data-dir="up">▲</button>
+        <div class="touch-controls__row">
+          <button class="btn btn--pad" data-dir="left">◀</button>
+          <button class="btn btn--pad" data-dir="down">▼</button>
+          <button class="btn btn--pad" data-dir="right">▶</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js" type="module"></script>
+  </body>
+</html>
