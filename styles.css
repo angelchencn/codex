@@ -1,0 +1,155 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 32px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  width: min(680px, 100%);
+  display: grid;
+  gap: 20px;
+}
+
+.app__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.app__subtitle {
+  margin: 4px 0 0;
+  color: #555;
+}
+
+.scoreboard {
+  display: flex;
+  gap: 16px;
+}
+
+.scoreboard__item {
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  min-width: 88px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.scoreboard__label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #777;
+}
+
+.scoreboard__value {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.game {
+  display: grid;
+  gap: 12px;
+}
+
+.game__status {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.game__board {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  width: min(520px, 100%);
+  aspect-ratio: 1 / 1;
+  background: #fff;
+  border-radius: 12px;
+  padding: 8px;
+  gap: 2px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.cell {
+  background: #f0f0f0;
+  border-radius: 3px;
+}
+
+.cell--snake {
+  background: #2e7d32;
+}
+
+.cell--head {
+  background: #1b5e20;
+}
+
+.cell--food {
+  background: #d32f2f;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background: #2e7d32;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn--secondary {
+  background: #4f4f4f;
+}
+
+.touch-controls {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+}
+
+.touch-controls__row {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  gap: 8px;
+}
+
+.btn--pad {
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  background: #1976d2;
+}
+
+@media (min-width: 700px) {
+  .touch-controls {
+    display: none;
+  }
+}
